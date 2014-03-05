@@ -40,7 +40,7 @@ Ensure these are available on your system and the C compiler can find them.
 
 The library is build with [`distutils`](http://docs.python.org/2/distutils/). To build and install, simply move to the directory with `setup.py` in it, and run
 
-```
+```shell
 python setup.py install
 ```
 
@@ -48,7 +48,7 @@ python setup.py install
 
 Ideally the Sauce Connect instance is spun up early and remains on. This could be done in a [Fab](http://docs.fabfile.org/en/1.8/) script, or any other tool used in your development workflow. Toward this, it can be used through its context manager,
 
-```
+```python
 import sauce
 
 with sauce.Connect():
@@ -58,7 +58,7 @@ with sauce.Connect():
 
 Alternatively, it can be used in individual tests:
 
-```
+```python
 import sauce
 import unittest
 from selenium import webdriver
